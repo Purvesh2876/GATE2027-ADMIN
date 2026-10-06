@@ -1,0 +1,77 @@
+/* ==========================================================================
+   GATE 2027 · Design tokens — the ONE place colours and type sizes are set.
+   Source: GATE 2027 Website Color System (developer + design handoff).
+   Change a value here and it changes everywhere it's used. Everything else
+   in globals.css refers to these names (old names are kept as aliases).
+   ========================================================================== */
+
+:root {
+  /* ── Core brand palette (logo-derived) ── */
+  --c-navy: #002C68;          /* Primary navy: headings, nav, footer, dark sections */
+  --c-blue: #253C82;          /* Secondary blue: supporting panels, info, selected */
+  --c-deep: #003677;          /* Deep blue: hover/detail, dark variations */
+  --c-orange: #FCAF1F;        /* Primary orange/gold: primary CTA, active accents */
+  --c-red: #CD382F;           /* Deep orange/red: hover, pressed, error, emphasis */
+  --c-yellow: #FFD400;        /* Highlight yellow: selective emphasis, warnings */
+  --c-white: #FFFFFF;
+
+  /* ── Supporting neutrals (UI support, not logo colours) ── */
+  --c-body: #5E6784;          /* Body text, descriptions */
+  --c-muted: #7B849C;         /* Metadata, helper text, secondary labels */
+  --c-border: #E2E7F0;        /* Cards, separators, tables, controls */
+  --c-input-border: #D9DFEA;  /* Form control border */
+  --c-placeholder: #98A0B4;   /* Placeholder, inactive helper text */
+  --c-soft: #F5F7FB;          /* Alternate sections, grouped content */
+  --c-soft-blue: #EEF3FA;     /* Information blocks, selected states */
+  --c-soft-orange: #FFF5DF;   /* Default eyebrow background, subtle highlight */
+  --c-table-alt: #F7F9FC;     /* Alternating table rows */
+  --c-on-dark-muted: #D7DEEB; /* Secondary text on navy */
+
+  /* ── Functional states ── */
+  --c-success: #14805E;
+  --c-info: #253C82;
+  --c-warning: #FFD400;
+  --c-error: #CD382F;
+
+  /* ── Categorical accents (stats tiles, sector and pass colours). Kept as a
+        deliberate second palette for category coding, per the handoff's
+        "reserve supporting colours for categories" rule. ── */
+  --accent-navy: #2E3A8C;
+  --accent-orange: #F26A21;
+  --accent-pink: #E6007E;
+  --accent-blue: #2B5BD7;
+  --accent-yellow: #FFC20E;
+  --accent-green: #00A86B;
+
+  /* ── Semantic aliases used across the stylesheet ── */
+  --navy-ink: var(--c-navy);
+  --navy-deep: var(--c-deep);
+  --navy: var(--c-blue);
+  --ink: var(--c-navy);
+  --muted: var(--c-body);
+  --orange: var(--c-orange);
+  --orange-2: var(--c-red);
+  --red: var(--c-red);
+  --yellow: var(--c-yellow);
+  --blue: var(--c-blue);
+  --green: var(--c-success);
+  --pink: var(--accent-pink);
+  --paper: var(--c-white);
+  --paper-2: var(--c-soft);
+  --line: var(--c-border);
+  --line-2: var(--c-input-border);
+
+  /* ── Type scale — one set of sizes for the whole site ── */
+  --fs-display: clamp(2.4rem, 3.7vw, 3.75rem);  /* Hero headline — middle ground, ~3 lines on desktop */
+  --fs-h1: clamp(2.25rem, 4vw, 3.5rem);         /* Page-level headline */
+  --fs-h2: clamp(1.9rem, 3.2vw, 2.75rem);       /* Section heading */
+  --fs-h3: clamp(1.3rem, 2.1vw, 1.75rem);       /* Feature / card title */
+  --fs-h4: 1.1rem;                              /* Sub-heading, table/group title */
+  --fs-h5: 1rem;                                /* Small card title */
+  --fs-lede: clamp(.92rem, 1vw, 1.02rem);        /* Intro paragraph */
+  --fs-body: 1rem;                              /* Body copy */
+  --fs-small: .9rem;                            /* Captions, notes */
+  --fs-micro: .75rem;                           /* Eyebrows, legal, meta */
+  --lh-tight: 1.1;
+  --lh-body: 1.6;
+}
